@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- World globe background -->
+  <circle cx="16" cy="16" r="14" fill="#0891b2" stroke="#0e7490" stroke-width="1"/>
+  
+  <!-- Continents/land masses -->
+  <path d="M8 12c2-1 4-1 6 0s3 2 4 0c1-2 2-3 4-2" fill="none" stroke="#065f46" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M6 18c3-1 5 0 7 1s4-1 6 0c2 1 3 2 5 1" fill="none" stroke="#065f46" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M10 24c2-1 4-1 6 0s4 1 6-1" fill="none" stroke="#065f46" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Clock center -->
+  <circle cx="16" cy="16" r="8" fill="#f8fafc" stroke="#1e293b" stroke-width="1"/>
+  
+  <!-- Clock numbers (simplified) -->
+  <circle cx="16" cy="10" r="0.8" fill="#1e293b"/>
+  <circle cx="22" cy="16" r="0.8" fill="#1e293b"/>
+  <circle cx="16" cy="22" r="0.8" fill="#1e293b"/>
+  <circle cx="10" cy="16" r="0.8" fill="#1e293b"/>
+  
+  <!-- Clock hands -->
+  <line x1="16" y1="16" x2="16" y2="12" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+  <line x1="16" y1="16" x2="19" y2="16" stroke="#1e293b" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Clock center dot -->
+  <circle cx="16" cy="16" r="1.5" fill="#1e293b"/>
+</svg>
