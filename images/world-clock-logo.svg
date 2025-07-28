@@ -1,0 +1,81 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Modern gradient for the main circle -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0891b2;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient for clock hands -->
+    <linearGradient id="handGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1f5f9;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Subtle shadow -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology operator="dilate" radius="1"/>
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main circular background -->
+  <circle cx="32" cy="32" r="30" fill="url(#mainGradient)" filter="url(#softGlow)"/>
+  
+  <!-- Inner white circle for contrast -->
+  <circle cx="32" cy="32" r="26" fill="#ffffff" opacity="0.15"/>
+  
+  <!-- World map simplified outline -->
+  <g fill="#ffffff" opacity="0.9" stroke="none">
+    <!-- Stylized world continents -->
+    <path d="M20 28C22 26, 26 25, 30 27C32 29, 28 32, 24 30C22 29, 20 28.5, 20 28Z"/> <!-- Americas -->
+    <path d="M34 24C38 22, 42 24, 44 28C42 32, 38 34, 34 32C32 30, 32 26, 34 24Z"/> <!-- Europe/Africa -->
+    <path d="M46 26C50 24, 54 26, 52 30C50 34, 46 32, 46 28C46 27, 46 26.5, 46 26Z"/> <!-- Asia -->
+  </g>
+  
+  <!-- Clock face elements -->
+  <!-- Hour markers (minimalist dots) -->
+  <g fill="#ffffff" opacity="0.8">
+    <circle cx="32" cy="12" r="2"/> <!-- 12 -->
+    <circle cx="52" cy="32" r="2"/> <!-- 3 -->
+    <circle cx="32" cy="52" r="2"/> <!-- 6 -->
+    <circle cx="12" cy="32" r="2"/> <!-- 9 -->
+  </g>
+  
+  <!-- Secondary hour markers (smaller) -->
+  <g fill="#ffffff" opacity="0.5">
+    <circle cx="44.5" cy="19.5" r="1"/> <!-- 2 -->
+    <circle cx="44.5" cy="44.5" r="1"/> <!-- 4 -->
+    <circle cx="19.5" cy="44.5" r="1"/> <!-- 8 -->
+    <circle cx="19.5" cy="19.5" r="1"/> <!-- 10 -->
+  </g>
+  
+  <!-- Clock hands (modern, bold) -->
+  <g stroke="url(#handGradient)" strokeWidth="3" strokeLinecap="round">
+    <!-- Hour hand pointing to ~10 -->
+    <line x1="32" y1="32" x2="26" y2="22" opacity="0.95"/>
+    <!-- Minute hand pointing to ~2 -->
+    <line x1="32" y1="32" x2="42" y2="20" opacity="0.95"/>
+  </g>
+  
+  <!-- Center hub -->
+  <circle cx="32" cy="32" r="3" fill="#ffffff" opacity="0.9"/>
+  <circle cx="32" cy="32" r="1.5" fill="url(#mainGradient)"/>
+  
+  <!-- Time zone indicators around the perimeter -->
+  <g fill="#ffffff" opacity="0.3">
+    <circle cx="32" cy="6" r="1"/>
+    <circle cx="55" cy="18" r="1"/>
+    <circle cx="58" cy="32" r="1"/>
+    <circle cx="55" cy="46" r="1"/>
+    <circle cx="32" cy="58" r="1"/>
+    <circle cx="9" cy="46" r="1"/>
+    <circle cx="6" cy="32" r="1"/>
+    <circle cx="9" cy="18" r="1"/>
+  </g>
+</svg>
